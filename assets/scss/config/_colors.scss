@@ -1,0 +1,41 @@
+// Usage as hsl(a) color
+// hsl                   - var(--color-alpha);
+// hsla                  - alpha(color-alpha, .1);
+// hsla saturation       - saturation(color-alpha, 80%);
+// hsla saturation/alpha - saturation(color-alpha, 80%, .1);
+// hsla lightness        - lightness(color-alpha, 20%);
+// hsla lightness/alpha  - lightness(color-alpha, 20%, .1);
+// Use default lightness and darkness
+// Lighter               - var(--color-alpha-l1);
+// Darker                - var(--color-alpha-l1);
+// Color helpers
+// Text color            - .text-color-alpha or .text-color-alpha-d1
+// background color      - .bg-color-alpha or .bg-color-alpha-d1
+
+$hsl-colors: (
+  // red
+  color-alpha: (4, 92%, 69%),
+  // dark gray
+  color-beta: (260, 4%, 14%),
+  // Light gray
+  color-gamma: (240, 6%, 21%),
+  // Yellow
+  color-delta: (37, 92%, 90%),
+  // Light blue
+  color-epsilon: (190, 51%, 91%),
+  // Gradient Pink
+  color-zeta: (335, 100%, 70%),
+  // Gradient Orange
+  color-eta: (25, 100%, 67%),
+  // Grays
+  color-gray-alpha: (36, 29%, 97%),
+  color-gray-beta: (40, 29%, 97%),
+  // Generics
+  color-dark: (0, 0%, 20%),
+  color-light: (0, 0%, 100%),
+  color-error: (0, 100%, 71%)
+);
+
+// Define the amount of darker/lighter shades of the colors
+$hsl-shades: 2;
+$hsl-shade-bump: 5;

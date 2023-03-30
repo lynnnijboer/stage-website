@@ -1,0 +1,43 @@
+// Functions
+@import "functions/get-value-if-key-exists";
+@import "functions/img-path";
+@import "functions/rem";
+@import "functions/strip-units";
+@import "functions/colors";
+
+// Mixins
+@import "mixins/define-HSL";
+@import "mixins/get-font-size";
+
+@import "config";
+@import "bootstrap/base";
+
+// Placeholders
+@import "placeholders/focus-style";
+@import "placeholders/reset-button";
+
+// Base
+@import "base/base";
+@import "base/fonts";
+@import "base/type";
+@import "base/colors";
+@import "base/config";
+@import "base/viewport-animation";
+
+// Utilities
+@import "utilities/colors";
+@import "utilities/list";
+@import "utilities/section";
+@import "utilities/hidden";
+@import "utilities/height";
+@import "utilities/font-weight";
+@import "utilities/opacity";
+@import "utilities/position";
+@import "utilities/hyphenating";
+@import "utilities/overflow";
+@import "utilities/width";
+@import "utilities/transitions";
+
+html {
+    scroll-behavior: smooth;
+}

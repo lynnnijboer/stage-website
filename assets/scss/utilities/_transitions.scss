@@ -1,0 +1,119 @@
+.transition-block {
+    transform-origin: right;
+    transform: scaleX(0);
+}
+.transition-block-2 {
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.transition-block-2,
+.transition-block {
+    width: 100vw;
+    height: calc(100vh / 4);
+    background-color: #f97168;
+
+    &-wrapper {
+        position: fixed;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+    }
+}
+
+@keyframes page-transition-leave-transition {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes block-1-transition-enter {
+    0% {
+        transform: scaleX(1);
+    }
+    15% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+@keyframes block-2-transition-enter {
+    0% {
+        transform: scaleX(1);
+    }
+    10% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+@keyframes block-3-transition-enter {
+    0% {
+        transform: scaleX(1);
+    }
+    5% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+@keyframes block-4-transition-enter {
+    0% {
+        transform: scaleX(1);
+    }
+    1% {
+        transform: scaleX(1);
+    }
+
+    100% {
+        transform: scaleX(0);
+    }
+}
+
+.page-transition-enter-active {
+    .transition-block {
+        &.block-1 {
+            animation: block-1-transition-enter 1s;
+        }
+        &.block-2 {
+            animation: block-2-transition-enter 1s;
+        }
+        &.block-3 {
+            animation: block-3-transition-enter 1s;
+        }
+        &.block-4 {
+            animation: block-4-transition-enter 1s;
+        }
+    }
+}
+.page-transition-leave-active {
+    .transition-block-2 {
+        animation: page-transition-leave-transition 1s;
+    }
+
+    .block-1 {
+        animation-delay: 0.15s;
+    }
+    .block-2 {
+        animation-delay: 0.1s;
+    }
+    .block-3 {
+        animation-delay: 0.05s;
+    }
+    .block-4 {
+        animation-delay: 0s;
+    }
+}

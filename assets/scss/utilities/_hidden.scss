@@ -1,0 +1,15 @@
+// stylelint-disable declaration-no-important
+
+.visually-hidden {
+  width: 0 !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden;
+}

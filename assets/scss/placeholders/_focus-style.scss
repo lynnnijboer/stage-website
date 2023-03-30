@@ -1,0 +1,12 @@
+%focus-style {
+  transition: box-shadow var(--transition-short) var(--ease-in-out-sine);
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible {
+    box-shadow: 0 0 0 rem(4px) var(--color-alpha);
+  }
+}

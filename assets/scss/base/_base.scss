@@ -1,0 +1,51 @@
+::selection {
+  background-color: alpha(color-beta, 0.3);
+}
+
+* {
+  @extend %focus-style;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: $font-family-base;
+}
+
+pre {
+  white-space: pre-wrap;
+}
+
+.container {
+  max-width: 100%;
+
+  @include media-breakpoint-up(xl) {
+    max-width: map-get($container-max-widths, xl);
+  }
+}
+
+a {
+  text-decoration: unset;
+  display: inline-block;
+  color: var(--dynamic-color);
+  transition: opacity var(--transition-short) var(--ease-in-out-sine),
+    color var(--transition-short) var(--ease-in-out-sine);
+
+  &:hover {
+    color: var(--link-hover-color);
+    text-decoration: var(--link-hover-text-decoration);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    // stylelint-disable declaration-no-important
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+
+    animation: {
+      duration: 0.01ms !important;
+      iteration-count: 1 !important;
+    }
+    // stylelint-enable declaration-no-important
+  }
+}

@@ -1,0 +1,13 @@
+:root {
+  @each $var, $color-value in $hsl-colors {
+    $hue: nth($color-value, 1);
+    $saturation: nth($color-value, 2);
+    $lightness: nth($color-value, 3);
+
+    @include defineColorHSL($var, $hue, $saturation, $lightness);
+
+    @if $hsl-shades > 0 {
+      @include defineShadeHSL($var, $hue, $saturation, $lightness, $hsl-shades);
+    }
+  }
+}

@@ -1,0 +1,8 @@
+// stylelint-disable property-no-vendor-prefix
+.hyphenate {
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+}
+// stylelint-enable property-no-vendor-prefix

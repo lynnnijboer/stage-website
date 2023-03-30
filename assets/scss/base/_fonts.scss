@@ -1,0 +1,16 @@
+$font-variants: (
+    100: thin,
+    300: light,
+    400: regular,
+    700: bold,
+);
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("~/assets/fonts/Montserrat-Medium.woff");
+}
+
+@font-face {
+    font-family: "Gelano";
+    src: url("~/assets/fonts/GalanoGrotesque-Bold.woff");
+}

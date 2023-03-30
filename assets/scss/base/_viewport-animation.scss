@@ -1,0 +1,30 @@
+@media (prefers-reduced-motion: no-preference) {
+  .viewport-animation {
+    opacity: 0;
+    will-change: opacity;
+    transition: opacity var(--transition-long) var(--ease-in-out-sine);
+
+    &.below-viewport,
+    &.above-viewport {
+      will-change: transform, opacity;
+      transition: transform var(--transition-short) var(--ease-in-out-sine),
+        opacity var(--transition-short) var(--ease-in-out-sine);
+
+      &.in-viewport {
+        transform: translateY(0);
+      }
+    }
+
+    &.below-viewport {
+      transform: translate3d(0, clamp(30px, 30%, 60px), 0);
+    }
+
+    &.above-viewport {
+      transform: translate3d(0, clamp(-30px, -30%, -60px), 0);
+    }
+
+    &.in-viewport {
+      opacity: 1;
+    }
+  }
+}
