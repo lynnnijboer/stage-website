@@ -1,6 +1,6 @@
 
 <template>
-  <button class="ui-button">{{ buttonText }}</button>
+  <button class="ui-button py-1 px-3" :class="color && variant === 'filled' ? `bg-color-${color}` : 'bg-color-alpha'">{{ buttonText }}</button>
 </template>
 
 <script>
@@ -10,7 +10,15 @@ export default {
   props: {
     buttonText: {
       type: String,
-      default: "View all projects"
+      default: "portfolio"
+    },
+    variant: {
+      type: String,
+      default: "filled"
+    },
+    color: {
+      type: String,
+      default: ""
     }
   }
 }
@@ -18,8 +26,8 @@ export default {
 
 <style lang="scss" scoped>
 .ui-button {
-  background-color: var(--color-alpha);
-  padding: rem(10px);
   color: var(--color-light);
+  border: unset;
+  width: fit-content;
 }
 </style>
