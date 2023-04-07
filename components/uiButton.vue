@@ -21,7 +21,5 @@ export default {
   background-color: var(--color-alpha);
   padding: rem(10px);
   color: var(--color-light);
-
-  @include reset-button;
 }
 </style>
