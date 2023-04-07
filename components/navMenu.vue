@@ -5,6 +5,7 @@
       <li class="list-item p-3"><a class="text-color-dark" href="#">home</a></li>
       <li class="list-item p-3"><a class="text-color-dark" href="#">projecten</a></li>
       <li class="list-item p-3"><a class="text-color-dark" href="#">contact</a></li>
+      <uiButton/>
     </ul>
   </nav>
 </template>
@@ -12,7 +13,8 @@
 <script>
 
 export default {
-  name: 'navMenu'
+  name: 'navMenu',
+  components: { uiButton }
 }
 </script>
 
