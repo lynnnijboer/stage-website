@@ -5,7 +5,7 @@
         <div class="heroModule__content">
           <h1 class="heroModule__content-title h3">{{ title }}</h1>
           <p class="heroModule__content-text">{{ text }}</p>
-          <uiButton/>
+          <uiButton color="alpha"/>
         </div>
       </div>
   </div>
