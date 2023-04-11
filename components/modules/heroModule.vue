@@ -49,6 +49,7 @@ export default {
       &-text {
         width: 100%;
         max-width: 450px;
+        margin-bottom: 40px;
       }
     }
   }
