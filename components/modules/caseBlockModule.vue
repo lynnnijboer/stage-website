@@ -31,7 +31,7 @@ export default {
   padding-bottom: rem(50px);
 
   &__title {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: var(text-color-beta);
   }
 
