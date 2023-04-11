@@ -16,7 +16,18 @@ export default {
             buttonText: 'button text',
             color: 'alpha',
             listItems: [
-                'home', 'my work', 'contact'
+                {
+                    itemText: 'home',
+                    link: 'hallo',
+                },
+                {
+                    itemText: 'my work',
+                    link: 'hallo',
+                },
+                {
+                    itemText: 'contact',
+                    link: 'hallo',
+                },
             ]
         }
     }

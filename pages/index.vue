@@ -19,20 +19,25 @@ export default {
         {
           type: 'hero',
           title: 'Title 1',
-          text: 'hallo ik ben lynn'
+          text: 'hallo ik ben lynn',
+          buttonColor: 'alpha',
+          buttonText: 'My work',
         },
         {
           type: 'cases',
           title: 'Title 2',
           caseBlocks: [
             {
-              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800"
+              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+              icon: "arrow-right"
             },
             {
-              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800"
+              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+              icon: "arrow-right"
             },
             {
-              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800"
+              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+              icon: "arrow-right"
             }
           ]
         },

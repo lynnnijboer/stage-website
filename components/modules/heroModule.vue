@@ -5,7 +5,7 @@
         <div class="heroModule__content">
           <h1 class="heroModule__content--title h3">{{ title }}</h1>
           <p class="heroModule__content--text">{{ text }}</p>
-          <uiButton color="alpha"/>
+          <uiButton :color="buttonColor" :buttonText="buttonText"/>
         </div>
       </div>
   </div>
@@ -25,6 +25,12 @@ export default {
     text: {
       type: String,
       default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    buttonColor: {
+      type: String,
+    },
+    buttonText: {
+      type: String,
     },
   },
 }

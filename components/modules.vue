@@ -1,8 +1,8 @@
 <template>
   <section>
     <div v-for="(module, index) in modules" :key="index">
-      <caseBlockModule v-if="module.type === 'cases'" :caseBlocks="module.caseBlocks" :title="module.title"/>
-      <heroModule v-if="module.type === 'hero'" :title="module.title" :text="module.text"/>
+      <caseBlockModule v-if="module.type === 'cases'" :caseBlocks="module.caseBlocks" :title="module.title" :img="img" :icon="icon"/>
+      <heroModule v-if="module.type === 'hero'" :title="module.title" :text="module.text" :buttonColor="module.buttonColor" :buttonText="module.buttonText"/>
     </div>
   </section>
 </template>
