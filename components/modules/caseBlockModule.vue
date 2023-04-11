@@ -31,8 +31,6 @@ export default {
   padding-bottom: rem(50px);
 
   &__title {
-    display: flex;
-    justify-content: center;
     margin-bottom: 40px;
     color: var(text-color-beta);
   }
