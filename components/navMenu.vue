@@ -5,7 +5,7 @@
       <li class="list-item p-3"><a class="text-color-dark" href="#">home</a></li>
       <li class="list-item p-3"><a class="text-color-dark" href="#">projecten</a></li>
       <li class="list-item p-3"><a class="text-color-dark" href="#">contact</a></li>
-      <uiButton/>
+      <uiButton color="alpha"/>
     </ul>
   </nav>
 </template>
