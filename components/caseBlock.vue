@@ -8,7 +8,7 @@
       </div>
       <div class="caseBlock__content--button">
         <div class="case-button">
-          <icons icon="arrow-right"/>
+          <icons :icon="icon"/>
         </div>
       </div>
     </div>
@@ -35,6 +35,10 @@ export default {
     text: {
       type: String,
       default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    },
+    icon: {
+      type: String,
+      default: ''
     }
   }
 }

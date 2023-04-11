@@ -18,7 +18,6 @@ export default {
     },
     color: {
       type: String,
-      default: ""
     }
   }
 }

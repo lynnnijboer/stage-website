@@ -3,7 +3,7 @@
     <div class="caseBlockModule">
     <h3 class="caseBlockModule__title h4">{{ title }}</h3>
     <div class="caseBlocks">
-      <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" img="https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+      <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" icon="arrow-right" img="https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800"/>
     </div>
   </div>
 </template>

@@ -2,10 +2,8 @@
 <template>
   <nav>
     <ul class="nav-items d-flex list-unstyled justify-content-end px-2">
-      <li class="list-item p-3"><a class="text-color-dark" href="#">home</a></li>
-      <li class="list-item p-3"><a class="text-color-dark" href="#">projecten</a></li>
-      <li class="list-item p-3"><a class="text-color-dark" href="#">contact</a></li>
-      <uiButton class="nav-button" color="alpha"/>
+      <li v-for="(item, index) in listItems" :key="index" class="list-item p-3"><a class="text-color-dark" :href="link">{{ item }}</a></li>
+      <uiButton class="nav-button" :buttonText="buttonText" :color="color"/>
     </ul>
   </nav>
 </template>
@@ -15,7 +13,20 @@ import uiButton from './uiButton.vue';
 
 export default {
   name: 'navMenu',
-  components: { uiButton }
+  components: { uiButton },
+  props: {
+    listItems: {
+      type: Array,
+    },
+    buttonText: {
+      type: String,
+      default: 'hallo'
+    },
+    color: {
+      type: String,
+      default: 'alpha'
+    }
+  }
 }
 </script>
 
