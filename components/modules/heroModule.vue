@@ -39,16 +39,16 @@ export default {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+  }
 
-    .heroModule__content {
-      grid-row: 1 / 3;
-      grid-column: 1;
+  &__content {
+    grid-row: 1 / 3;
+    grid-column: 1;
 
-      &--text {
-        width: 100%;
-        max-width: 450px;
-        margin-bottom: 40px;
-      }
+    &--text {
+      width: 100%;
+      max-width: 450px;
+      margin-bottom: 40px;
     }
   }
 }

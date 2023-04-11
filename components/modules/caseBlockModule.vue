@@ -3,9 +3,7 @@
     <div class="caseBlockModule">
     <h3 class="caseBlockModule__title h4">{{ title }}</h3>
     <div class="caseBlocks">
-      <caseBlock img="https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800"/>
-      <caseBlock img="https://images.pexels.com/photos/5052877/pexels-photo-5052877.jpeg?auto=compress&cs=tinysrgb&w=800"/>
-      <caseBlock img="https://images.pexels.com/photos/10706618/pexels-photo-10706618.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+      <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" img="https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800"/>
     </div>
   </div>
 </template>
@@ -20,6 +18,10 @@ export default {
     title: {
       type: String,
       default: "my work"
+    },
+    caseBlocks: {
+      type: Array,
+      required: true
     }
   }
 }
