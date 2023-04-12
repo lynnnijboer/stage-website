@@ -32,6 +32,7 @@ export default {
 
 <style lang="scss" scoped>
 .navigation {
+  z-index: 999;
   position: fixed;
   right: 0;
   top: 0;

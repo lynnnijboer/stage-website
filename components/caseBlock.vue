@@ -54,9 +54,12 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   align-items: flex-end;
+  transition: all 0.5s ease-in-out;
   overflow: hidden;
 
   &:hover {
+    transform: translateY(-10px);
+
     .caseBlock__content--button {
       opacity: 1;
       transform: translateX(0%)
@@ -79,12 +82,17 @@ export default {
     }
 
     &--button {
-      opacity: 0;
-      transform: translateX(40%);
+      opacity: 1;
+      transform: translateX(0%);
       transition: ease-in-out 0.3s all;
       grid-column-start: 2;
       display: flex;
       justify-content: flex-end;
+
+      @include media-breakpoint-up(md) {
+        transform: translateX(40%);
+        opacity: 0;
+      }
 
       .case-button {
         width: rem(70px);

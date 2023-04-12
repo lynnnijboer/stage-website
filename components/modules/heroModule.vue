@@ -39,7 +39,7 @@ export default {
 <style lang="scss" scoped>
 .heroModule {
   padding-bottom: rem(50px);
-  background: #211e1e;
+  background-color: var(--color-beta);
 
   &__wrapper {
     height: 100vh;

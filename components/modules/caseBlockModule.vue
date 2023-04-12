@@ -1,10 +1,10 @@
 
 <template>
   <div class="container">
-     <div v-in-viewport.once class="caseBlockModule viewport-animation">
-        <h3 class="caseBlockModule__title h4 text-color-light">{{ title }}</h3>
+     <div class="caseBlockModule" :class="title ? 'transform-small' : ''">
+        <h3 v-if="title" class="caseBlockModule__title h4 text-color-light">{{ title }}</h3>
         <div class="caseBlocks">
-          <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" :icon="caseBlock.icon" :img="caseBlock.img"/>
+          <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" :icon="caseBlock.icon" :img="caseBlock.img" :title="caseBlock.title"/>
         </div>
     </div>
   </div>
@@ -30,6 +30,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.transform-small {
+  transform: translateY(-20%);
+}
+
 .caseBlockModule {
   transform: translateY(-30%);
 

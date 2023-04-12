@@ -2,9 +2,9 @@
 <template>
   <div class="container">
     <div class="textBlockModule">
-      <div class="textBlockModule__wrapper">
-        <div v-for="(block, index) in textBlocks" :key="index" class="textBlockModule__textBlock w-100" :class="textBlocks.length === 1 ? 'col-12 d-flex align-items-center flex-column text-center' : 'col'">
-              <h3 class="h4" v-if="block.title">{{ block.title }}</h3>
+      <div class="textBlockModule__wrapper" :class="textBlocks.length === 1 ? '' : 'grid'">
+        <div v-for="(block, index) in textBlocks" :key="index" class="textBlockModule__textBlock w-100" :class="textBlocks.length === 1 ? 'd-flex flex-column align-items-center text-center' : ''">
+              <h3 class="title h4">{{ block.title }}</h3>
               <p class="text" v-if="block.text">{{ block.text }}</p>
               <uiButton class="textBlockModule__button" v-if="block.buttonText && block.buttonColor" :buttonText="block.buttonText" :color="block.buttonColor"/>
           </div>
@@ -33,10 +33,28 @@ export default {
   padding-top: rem(50px);
   padding-bottom: rem(50px);
 
-  &__wrapper {
+  .title {
+    height: auto;
+
+    @include media-breakpoint-up(md) {
+      height: 47px
+    }
+  }
+
+  .grid {
     justify-content: space-between;
-    flex-wrap: wrap;
-    display: flex;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: auto auto;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: auto auto auto
+    }
   }
 
   &__button {
