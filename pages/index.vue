@@ -19,7 +19,9 @@ export default {
           title: 'This is my website',
           text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           buttonColor: 'alpha',
+          secondButtonColor: '',
           buttonText: 'My work',
+          secondButtonText: 'Contact me',
         },
         {
           type: 'cases',
@@ -75,6 +77,7 @@ export default {
         },
         {
           type: 'textBlock',
+          backgroundDark: true,
           textBlocks: [
             {
               title: 'How i started',
@@ -86,15 +89,24 @@ export default {
               title: '',
               text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
               buttonColor: 'alpha',
-              buttonText: '',
+              buttonText: 'button',
             },
           ]
         },
         {
           type: 'imageTextBlock',
+          buttonColor: 'alpha',
+          buttonText: '',
           title: 'How i started',
-          text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
           img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+          textBlocks: [
+            {
+              text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+            },
+            {
+              text: 'Marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+            },
+          ]
         }
       ]
     }
