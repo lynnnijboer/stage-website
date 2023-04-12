@@ -45,7 +45,6 @@ export default {
 
   &__wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
   }
 
   &__content {
