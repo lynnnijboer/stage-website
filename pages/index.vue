@@ -16,8 +16,8 @@ export default {
       modules: [
         {
           type: 'hero',
-          title: 'Title 1',
-          text: 'hallo ik ben lynn',
+          title: 'This is my website',
+          text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
           buttonColor: 'alpha',
           buttonText: 'My work',
         },

@@ -1,6 +1,6 @@
 
 <template>
-  <nav>
+  <nav class="navigation">
     <ul class="nav-items d-flex list-unstyled justify-content-end px-2">
       <li v-for="(item, index) in listItems" :key="index" class="list-item p-3"><a class="text-color-dark" :href="item.link">{{ item.itemText }}</a></li>
       <uiButton class="nav-button" :buttonText="buttonText" :color="color"/>
@@ -31,16 +31,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.nav-items {
-  flex-direction: column;
-  align-items: center;
+.navigation {
+  position: fixed;
+  right: 0;
+  top: 0;
 
-  .nav-button {
-    height: 100%;
-  }
+  .nav-items {
+    flex-direction: column;
+    align-items: center;
 
-  @include media-breakpoint-up(md) {
-    flex-direction: row;
+    .nav-button {
+      height: 100%;
+    }
+
+    @include media-breakpoint-up(md) {
+      flex-direction: row;
+    }
   }
 }
 </style>
