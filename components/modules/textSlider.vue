@@ -45,7 +45,11 @@ export default {
 
     &--word {
       text-transform: uppercase;
-      font-size: 10rem;
+      font-size: 8rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 10rem;
+      }
     }
   }
 }

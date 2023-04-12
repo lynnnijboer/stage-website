@@ -88,9 +88,14 @@ export default {
               buttonColor: 'alpha',
               buttonText: '',
             },
-
           ]
         },
+        {
+          type: 'imageTextBlock',
+          title: 'How i started',
+          text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+          img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+        }
       ]
     }
   }

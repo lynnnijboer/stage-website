@@ -50,6 +50,7 @@ export default {
 
     @include media-breakpoint-up(md) {
       grid-template-columns: auto auto;
+      gap: 40px;
     }
 
     @include media-breakpoint-up(lg) {

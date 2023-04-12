@@ -31,15 +31,31 @@ export default {
 
 <style lang="scss" scoped>
 .transform-small {
-  transform: translateY(-20%);
+  transform: translateY(-5%);
+
+  @include media-breakpoint-up(md) {
+    transform: translateY(-10%);
+  }
+
+  @include media-breakpoint-up(lg) {
+    transform: translateY(-15%);
+  }
 }
 
 .caseBlockModule {
-  transform: translateY(-30%);
+  transform: translateY(-10%);
 
   padding: {
     top: rem(50px);
     bottom: rem(50px);
+  }
+
+  @include media-breakpoint-up(md) {
+    transform: translateY(-20%);
+  }
+
+  @include media-breakpoint-up(lg) {
+    transform: translateY(-30%);
   }
 
   &__title {
