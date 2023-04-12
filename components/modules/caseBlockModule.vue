@@ -1,8 +1,8 @@
 
 <template>
   <div class="container">
-     <div class="caseBlockModule">
-        <h3 class="caseBlockModule__title h4">{{ title }}</h3>
+     <div v-in-viewport.once class="caseBlockModule viewport-animation">
+        <h3 class="caseBlockModule__title h4 text-color-light">{{ title }}</h3>
         <div class="caseBlocks">
           <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" :icon="caseBlock.icon" :img="caseBlock.img"/>
         </div>
@@ -31,8 +31,12 @@ export default {
 
 <style lang="scss" scoped>
 .caseBlockModule {
-  padding-top: rem(50px);
-  padding-bottom: rem(50px);
+  transform: translateY(-30%);
+
+  padding: {
+    top: rem(50px);
+    bottom: rem(50px);
+  }
 
   &__title {
     margin-bottom: 20px;

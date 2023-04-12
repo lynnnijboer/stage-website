@@ -23,7 +23,7 @@ export default {
         },
         {
           type: 'cases',
-          title: 'Title 2',
+          title: 'My projects',
           caseBlocks: [
             {
               img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
