@@ -40,8 +40,8 @@ export default {
 
 <style lang="scss" scoped>
 .textBlockModule {
-  padding-top: rem(50px);
-  padding-bottom: rem(50px);
+  padding-top: rem(100px);
+  padding-bottom: rem(100px);
 
   .title {
     height: auto;
