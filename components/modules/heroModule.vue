@@ -5,7 +5,10 @@
         <div class="heroModule__content">
           <h1 class="heroModule__content--title h3">{{ title }}</h1>
           <p class="heroModule__content--text">{{ text }}</p>
-          <uiButton :color="buttonColor" :buttonText="buttonText"/>
+          <div class="heroModule__content--buttons">
+            <uiButton :color="buttonColor" :buttonText="buttonText"/>
+            <uiButton :color="secondButtonColor" :buttonText="secondButtonText"/>
+          </div>
         </div>
       </div>
   </div>
@@ -29,7 +32,13 @@ export default {
     buttonColor: {
       type: String,
     },
+    secondButtonColor: {
+      type: String,
+    },
     buttonText: {
+      type: String,
+    },
+    secondButtonText: {
       type: String,
     },
   },
@@ -54,6 +63,18 @@ export default {
       width: 100%;
       max-width: 450px;
       margin-bottom: 40px;
+    }
+
+    &--buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+
+      @include media-breakpoint-up(sm) {
+        flex-direction: row;
+        align-items: flex-end;
+      }
     }
   }
 }

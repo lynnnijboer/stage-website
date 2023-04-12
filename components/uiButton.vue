@@ -1,6 +1,6 @@
 
 <template>
-  <button class="ui-button py-1 px-3" :class="color && variant === 'filled' ? `bg-color-${color}` : 'bg-color-alpha'">{{ buttonText }}</button>
+  <button class="ui-button" :class="color && variant === 'filled' ? `bg-color-${color} py-1 px-3` : 'btn-transparant'">{{ buttonText }}</button>
 </template>
 
 <script>
@@ -28,5 +28,10 @@ export default {
   color: var(--color-light);
   border: unset;
   width: fit-content;
+}
+
+.btn-transparant {
+  background-color: transparent;
+  text-decoration: underline;
 }
 </style>

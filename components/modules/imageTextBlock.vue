@@ -2,10 +2,11 @@
 <template>
   <div class="container">
     <div class="imageTextBlock">
-      <div v-if="title && text" class="imageTextBlock__textBlock col-12 col-md-6 p-0">
-        <h3 class="title h4">{{ title }}</h3>
-        <p class="text" 
-          v-if="text">{{ text }}</p>
+      <div class="imageTextBlock__textBlock col-12 col-md-6 p-0">
+        <h3 v-if="title" class="title h4">{{ title }}</h3>
+        <div class="textBlocks" v-for="(block, index) in textBlocks" :key="index">
+          <p v-if="block.text" class="text">{{ block.text }}</p>
+        </div>
         <uiButton class="imageTextBlock__button" 
           v-if="buttonText && buttonColor" 
           :buttonText="buttonText" 
@@ -33,12 +34,15 @@ export default {
     title: {
       type: String
     },
-    text: {
+    block: {
       type: String,
     },
     img: {
       type: String,
       required: true
+    },
+    textBlocks: {
+      type: Array,
     },
   },
 }
@@ -46,6 +50,7 @@ export default {
 
 <style lang="scss" scoped>
 .imageTextBlock {
+  overflow: hidden;
   display: flex;
   gap: 20px;
   align-items: center;
