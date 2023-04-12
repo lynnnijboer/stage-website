@@ -1,5 +1,6 @@
 
 <template>
+  <div class="container">
     <div class="textBlockModule">
       <div class="textBlockModule__wrapper">
         <div v-for="(block, index) in textBlocks" :key="index" class="textBlockModule__textBlock w-100" :class="textBlocks.length === 1 ? 'col-12 d-flex align-items-center flex-column text-center' : 'col'">
@@ -9,6 +10,7 @@
           </div>
       </div>
     </div>
+  </div>
 </template>
 
 <script>

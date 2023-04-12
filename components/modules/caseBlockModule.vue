@@ -1,9 +1,11 @@
 
 <template>
-    <div class="caseBlockModule">
-    <h3 class="caseBlockModule__title h4">{{ title }}</h3>
-    <div class="caseBlocks">
-      <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" :icon="caseBlock.icon" :img="caseBlock.img"/>
+  <div class="container">
+     <div class="caseBlockModule">
+        <h3 class="caseBlockModule__title h4">{{ title }}</h3>
+        <div class="caseBlocks">
+          <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" :icon="caseBlock.icon" :img="caseBlock.img"/>
+        </div>
     </div>
   </div>
 </template>

@@ -1,9 +1,7 @@
 <template>
-  <div class="container">
     <div class="modules">
       <modules :modules="modules"/>
     </div>
-  </div>
 </template>
 
 <script>
