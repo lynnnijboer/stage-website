@@ -6,6 +6,7 @@
       <textSlider v-if="module.type === 'textSlider'" :word="module.word" :textSlider="module.textSlider"/>
       <textBlockModule v-if="module.type === 'textBlock'" :textBlocks="module.textBlocks" :bgDark="module.backgroundDark"/>
       <imageTextBlock v-if="module.type === 'imageTextBlock'" :title="module.title" :text="module.text" :img="module.img" :buttonColor="module.buttonColor" :buttonText="module.buttonText" :textBlocks="module.textBlocks"/>
+      <skillBlockModule v-if="module.type === 'skillBlock'" :skillBlocks="module.skillBlocks"/>
     </div>
   </section>
 </template>
@@ -16,9 +17,10 @@ import heroModule from './modules/heroModule.vue';
 import textBlockModule from './modules/textBlockModule.vue';
 import textSlider from './modules/textSlider.vue';
 import imageTextBlock from './modules/imageTextBlock.vue';
+import skillBlockModule from './modules/skillBlockModule.vue';
 
 export default {
-  components: { caseBlockModule, heroModule, textBlockModule, textSlider, imageTextBlock },
+  components: { caseBlockModule, heroModule, textBlockModule, textSlider, imageTextBlock, skillBlockModule },
   name: 'modules',
   props: {
     modules: {

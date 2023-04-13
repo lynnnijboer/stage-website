@@ -2,7 +2,7 @@
 <template>
   <div class="container">
      <div class="caseBlockModule" :class="title ? 'transform-small' : ''">
-        <h3 v-if="title" class="caseBlockModule__title h4 text-color-light">{{ title }}</h3>
+        <h3 v-if="title" class="caseBlockModule__title h4 text-color-dark">{{ title }}</h3>
         <div class="caseBlocks">
           <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" :icon="caseBlock.icon" :img="caseBlock.img" :title="caseBlock.title"/>
         </div>
@@ -30,32 +30,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.transform-small {
-  transform: translateY(-5%);
-
-  @include media-breakpoint-up(md) {
-    transform: translateY(-10%);
-  }
-
-  @include media-breakpoint-up(lg) {
-    transform: translateY(-15%);
-  }
-}
-
 .caseBlockModule {
-  transform: translateY(-10%);
 
   padding: {
     top: rem(50px);
-    bottom: rem(50px);
-  }
-
-  @include media-breakpoint-up(md) {
-    transform: translateY(-20%);
-  }
-
-  @include media-breakpoint-up(lg) {
-    transform: translateY(-30%);
+    bottom: rem(150px);
   }
 
   &__title {

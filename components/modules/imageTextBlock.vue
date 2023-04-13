@@ -3,9 +3,11 @@
   <div class="container">
     <div class="imageTextBlock">
       <div class="imageTextBlock__textBlock col-12 col-md-6 p-0">
-        <h3 v-if="title" class="title h4">{{ title }}</h3>
-        <div class="textBlocks" v-for="(block, index) in textBlocks" :key="index">
-          <p v-if="block.text" class="text">{{ block.text }}</p>
+        <div class="imageTextBlock__textBlock--text">
+          <h3 v-if="title" class="title h4">{{ title }}</h3>
+          <div class="textBlocks" v-for="(block, index) in textBlocks" :key="index">
+            <p v-if="block.text" class="p">{{ block.text }}</p>
+          </div>
         </div>
         <uiButton class="imageTextBlock__button" 
           v-if="buttonText && buttonColor" 
@@ -34,7 +36,7 @@ export default {
     title: {
       type: String
     },
-    block: {
+    text: {
       type: String,
     },
     img: {
@@ -57,7 +59,7 @@ export default {
   flex-direction: column;
 
   padding: {
-    top: rem(50px);
+    top: rem(100px);
     bottom: rem(50px);
   }
 
@@ -67,7 +69,13 @@ export default {
   }
 
   &__textBlock {
-    .text {
+    height: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
       width: 100%;
       max-width: 600px;
     }
@@ -75,9 +83,9 @@ export default {
 
   &__imageBlock {
     width: 100%;
-    height: 400px;
-    background-size: cover;
+    height: 350px;
     background-image: var(--bg-img);
+    background-size: cover;
   }
 }
 </style>
