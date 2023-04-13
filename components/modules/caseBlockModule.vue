@@ -1,21 +1,29 @@
 
 <template>
   <div class="container">
-     <div class="caseBlockModule" :class="title ? 'transform-small' : ''">
-        <h3 v-if="title" class="caseBlockModule__title h4 text-color-dark">{{ title }}</h3>
-        <div class="caseBlocks">
-          <caseBlock v-for="(caseBlock, index) in caseBlocks" :key="index" :icon="caseBlock.icon" :img="caseBlock.img" :title="caseBlock.title"/>
-        </div>
+    <div class="caseBlockModule" :class="title ? 'transform-small' : ''">
+      <h3 
+        v-if="title" 
+        class="caseBlockModule__title h4 text-color-dark"
+      >
+        {{ title }}
+      </h3>
+      <div class="caseBlocks">
+        <caseBlock 
+          v-for="(caseBlock, index) in caseBlocks" 
+          :key="index" :icon="caseBlock.icon" 
+          :img="caseBlock.img" 
+          :title="caseBlock.title"
+        />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import caseBlock from '../caseBlock.vue';
 
 export default {
   name: 'caseBlockModule',
-  components: { caseBlock },
   props: {
     title: {
       type: String,

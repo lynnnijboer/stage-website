@@ -2,8 +2,20 @@
 <template>
   <nav class="navigation">
     <ul class="nav-items d-flex list-unstyled justify-content-end px-2">
-      <li v-for="(item, index) in listItems" :key="index" class="p-3"><a class="text-color-light" :href="item.link">{{ item.itemText }}</a></li>
-      <uiButton class="nav-button" :buttonText="buttonText" :color="color"/>
+      <li 
+        v-for="(item, index) in listItems" 
+        :key="index" 
+        class="p-3">
+        <a 
+          class="text-color-light" 
+          :href="item.link">
+          {{ item.itemText }}
+        </a>
+      </li>
+      <uiButton 
+        class="nav-button" 
+        :buttonText="buttonText" 
+        :color="color"/>
     </ul>
   </nav>
 </template>

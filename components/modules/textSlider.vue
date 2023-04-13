@@ -1,9 +1,15 @@
 
 <template>
   <div class="marquee">
-      <div class="marquee__group">
-        <h5 class="marquee__group--word" v-for="(word, index) in textSlider" :key="index">{{ word.word }}</h5>
-      </div>
+    <div class="marquee__group">
+      <h5 
+        v-for="(word, index) in textSlider" 
+        :key="index" 
+        class="marquee__group--word" 
+      >
+      {{ word.word }}
+      </h5>
+    </div>
   </div>
 </template>
 

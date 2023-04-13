@@ -6,8 +6,14 @@
           <h1 class="heroModule__content--title h3">{{ title }}</h1>
           <p class="heroModule__content--text">{{ text }}</p>
           <div class="heroModule__content--buttons">
-            <uiButton :color="buttonColor" :buttonText="buttonText"/>
-            <uiButton :color="secondButtonColor" :buttonText="secondButtonText"/>
+            <uiButton 
+              :color="buttonColor" 
+              :buttonText="buttonText"
+            />
+            <uiButton 
+              :color="secondButtonColor" 
+              :buttonText="secondButtonText"
+            />
           </div>
         </div>
       </div>
@@ -15,11 +21,9 @@
 </template>
 
 <script>
-import uiButton from '../uiButton.vue';
 
 export default {
   name: "heroModule",
-  components: { uiButton },
   props: {
     title: {
       type: String,

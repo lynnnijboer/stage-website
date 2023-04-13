@@ -1,6 +1,11 @@
 
 <template>
-  <button class="ui-button" :class="color && variant === 'filled' ? `bg-color-${color} py-1 px-3` : 'btn-transparant'">{{ buttonText }}</button>
+  <button 
+      class="ui-button" 
+      :class="color && variant === 'filled' ? `bg-color-${color} py-1 px-3` : 'btn-transparant'"
+    >
+    {{ buttonText }}
+  </button>
 </template>
 
 <script>

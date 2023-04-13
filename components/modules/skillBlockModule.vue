@@ -4,18 +4,20 @@
     <div class="skillBlockModule">
       <div class="container">
         <div class="skillBlockModule__skillBlocks">
-          <skillBlock v-for="(skillBlock, index) in skillBlocks" :key="index" :text="skillBlock.text" :title="skillBlock.title"/>
+          <skillBlock 
+            v-for="(skillBlock, index) in skillBlocks" 
+            :key="index" 
+            :text="skillBlock.text" 
+            :title="skillBlock.title"/>
         </div>
       </div>
     </div>
 </template>
 
 <script>
-import skillBlock from '../skillBlock.vue';
 
 export default {
   name: 'skillBlockModule',
-  components: { skillBlock },
   props: {
     skillBlocks: {
       type: Array,
@@ -43,7 +45,7 @@ export default {
     grid-template-columns: 1fr;
     gap: 40px;
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       grid-template-columns: 1fr 1fr;
     }
   }

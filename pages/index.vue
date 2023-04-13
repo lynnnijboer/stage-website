@@ -5,12 +5,9 @@
 </template>
 
 <script>
-import modules from "../components/modules.vue";
-import caseBlockModule from "../components/modules/caseBlockModule.vue";
-import heroModule from "../components/modules/heroModule.vue";
+
 export default {
   name: 'IndexPage',
-  components: { modules, caseBlockModule, heroModule },
   data() {
     return {
       modules: [
@@ -74,40 +71,16 @@ export default {
           backgroundDark: true,
           textBlocks: [
             {
-              title: 'Vue.js',
+              title: 'Nuxt/Vue.js',
+              text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
               buttonColor: 'alpha',
               buttonText: '',
-              paragraphs: [
-                {
-                  text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
-                },
-                {
-                  text: 'Marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
-                },
-              ]
             },
             {
               title: 'Nuxt.js',
+              text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
               buttonColor: 'alpha',
               buttonText: '',
-              paragraphs: [
-                {
-                  text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
-                },
-              ]
-            },
-            {
-              title: 'Contentful',
-              buttonColor: 'alpha',
-              buttonText: '',
-              paragraphs: [
-                {
-                  text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
-                },
-                {
-                  text: 'Marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
-                },
-              ]
             },
           ]
         },
@@ -117,14 +90,7 @@ export default {
           buttonText: 'See more',
           title: 'How i started',
           img: "https://images.pexels.com/photos/2449600/pexels-photo-2449600.png?auto=compress&cs=tinysrgb&w=800",
-          textBlocks: [
-            {
-              text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
-            },
-            {
-              text: 'Marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
-            },
-          ]
+          text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
         },
         {
           type: 'textSlider',

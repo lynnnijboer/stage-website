@@ -1,6 +1,9 @@
 
 <template>
-  <div class="caseBlock w-100" :style="{ '--bg-img': `url('${img}')` }">
+  <div 
+    class="caseBlock w-100" 
+    :style="{ '--bg-img': `url('${img}')` }"
+  >
     <div class="caseBlock__content text-color-light">
       <div class="caseBlock__content--text">
         <h5 class="m-0 h6">{{ title }}</h5>
@@ -46,11 +49,12 @@ export default {
 
 <style lang="scss" scoped>
 .caseBlock {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
+  border-radius: 2rem;
   cursor: pointer;
   background-image: var(--bg-img);
   background-size: cover;
   height: rem(450px);
-  border-top: 10px solid var(--color-alpha);
   display: grid;
   grid-template-columns: 1fr;
   align-items: flex-end;
