@@ -1,6 +1,6 @@
 
 <template>
-  <div class="textBlockModule" :class="bgDark === true ? 'bg-color-dark' : 'bg-color-light'">
+  <div class="textBlockModule" :class="bgDark === true ? 'bg-color-beta' : 'bg-color-light'">
     <div class="container">
       <div class="textBlockModule__wrapper" :class="textBlocks.length === 1 ? '' : 'grid'">
         <div 
@@ -8,12 +8,13 @@
         :key="index" 
         class="textBlockModule__textBlock w-100" 
         :class="[textBlocks.length === 1 ? 'd-flex flex-column align-items-center text-center' : '',
-        bgDark === true ? 'text-color-light' : 'text-color-dark']
-        ">
+        bgDark === true ? 'text-color-light padding-bg-dark' : 'text-color-dark']">
               <h3 class="title h4">{{ block.title }}</h3>
-              <p class="text" v-if="block.text">{{ block.text }}</p>
+              <div v-for="(paragraph, index) in paragraphs" :key="index">
+                <p  class="p">{{ paragraph.text }}</p>
+              </div>
               <uiButton class="textBlockModule__button" v-if="block.buttonText && block.buttonColor" :buttonText="block.buttonText" :color="block.buttonColor"/>
-          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -30,6 +31,9 @@ export default {
       type: Array,
       required: true
     },
+    paragraphs: {
+      type: Array,
+    },
     bgDark: {
       type: Boolean,
       required: true
@@ -40,8 +44,13 @@ export default {
 
 <style lang="scss" scoped>
 .textBlockModule {
-  padding-top: rem(100px);
-  padding-bottom: rem(100px);
+  padding-top: rem(50px);
+  padding-bottom: rem(50px);
+
+  .padding-bg-dark {
+    padding-top: rem(50px);
+    padding-bottom: rem(50px);
+  }
 
   .title {
     height: auto;

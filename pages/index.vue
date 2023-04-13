@@ -27,12 +27,12 @@ export default {
           type: 'skillBlock',
           skillBlocks: [
             {
-              title: 'How i started',
+              title: 'Where did i follow my internship?',
               text: 'Marketing content creation for brands & individuals. Providing graphic design.',
             },
             {
-              title: 'How i started',
-              text: 'Marketing content creation for brands & individuals. Providing graphic design.',
+              title: 'Skills i have learne',
+              text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
             },
           ]
         },
@@ -54,17 +54,17 @@ export default {
           caseBlocks: [
             {
               title: 'Hallo',
-              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+              img: "https://images.pexels.com/photos/3007355/pexels-photo-3007355.jpeg?auto=compress&cs=tinysrgb&w=800",
               icon: "arrow-right"
             },
             {
               title: 'Project',
-              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+              img: "https://images.pexels.com/photos/6294444/pexels-photo-6294444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
               icon: "arrow-right"
             },
             {
               title: 'Lynn',
-              img: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
+              img: "https://images.pexels.com/photos/2047905/pexels-photo-2047905.jpeg?auto=compress&cs=tinysrgb&w=800",
               icon: "arrow-right"
             }
           ]
@@ -74,16 +74,40 @@ export default {
           backgroundDark: true,
           textBlocks: [
             {
-              title: 'How i started',
-              text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+              title: 'Vue.js',
               buttonColor: 'alpha',
               buttonText: '',
+              paragraphs: [
+                {
+                  text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+                },
+                {
+                  text: 'Marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+                },
+              ]
             },
             {
-              title: '',
-              text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+              title: 'Nuxt.js',
               buttonColor: 'alpha',
               buttonText: '',
+              paragraphs: [
+                {
+                  text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+                },
+              ]
+            },
+            {
+              title: 'Contentful',
+              buttonColor: 'alpha',
+              buttonText: '',
+              paragraphs: [
+                {
+                  text: 'CO-DA Studios is a digital media content production company specializing in marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+                },
+                {
+                  text: 'Marketing content creation for brands & individuals. Providing graphic design, video production, photography, and animation that seek to inspire your brand’s clientele.',
+                },
+              ]
             },
           ]
         },
