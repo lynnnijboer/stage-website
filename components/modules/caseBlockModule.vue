@@ -11,9 +11,11 @@
       <div class="caseBlocks">
         <caseBlock 
           v-for="(caseBlock, index) in caseBlocks" 
-          :key="index" :icon="caseBlock.icon" 
-          :img="caseBlock.img" 
-          :title="caseBlock.title"
+          :key="index" 
+          :icon="caseBlock.icon" 
+          :img="caseBlock.fields.img.fields.file.url" 
+          :title="caseBlock.fields.title"
+          :text="caseBlock.fields.text"
         />
       </div>
     </div>

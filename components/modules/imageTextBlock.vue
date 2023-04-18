@@ -4,18 +4,17 @@
     <div class="imageTextBlock">
       <div 
         v-if="title && text" 
-        class="imageTextBlock__textBlock col-12 col-md-6 p-0"
+        class="imageTextBlock__textBlock col-12 col-md-6"
       >
         <div class="imageTextBlock__textBlock--text text-color-dark">
-          <h3 class="title h4">{{ title }}</h3>
-          <p class="p">{{ text }}</p>
+          <textBlock
+            :title="title"
+            :text="text"
+            :img="img"
+            :buttonText="buttonText"
+            :buttonColor="buttonColor"
+          />
         </div>
-        <uiButton 
-          class="imageTextBlock__button" 
-          v-if="buttonText && buttonColor" 
-          :buttonText="buttonText" 
-          :color="buttonColor"
-        />
       </div>
       <div 
         class="imageTextBlock__imageBlock p-0"
@@ -56,7 +55,6 @@ export default {
 .imageTextBlock {
   overflow: hidden;
   display: flex;
-  gap: 20px;
   align-items: center;
   flex-direction: column;
 
@@ -67,7 +65,6 @@ export default {
 
   @include media-breakpoint-up(md) {
     flex-direction: row;
-    gap: 40px;
   }
 
   &__textBlock {
@@ -75,11 +72,18 @@ export default {
     height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: 20px;
 
     .text {
       width: 100%;
       max-width: 600px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+      padding: 0 2rem 0 0;
     }
   }
 

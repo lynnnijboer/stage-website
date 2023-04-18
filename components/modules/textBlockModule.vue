@@ -16,14 +16,12 @@
           :class="[textBlocks.length === 1 ? 'd-flex flex-column align-items-center text-center' : '',
           bgDark === true ? 'text-color-light padding-bg-dark' : 'text-color-dark']"
         >
-              <h3 class="title h4">{{ block.title }}</h3>
-              <p  class="text">{{ block.text }}</p>
-              <uiButton 
-                class="textBlockModule__button" 
-                v-if="block.buttonText && block.buttonColor" 
-                :buttonText="block.buttonText" 
-                :color="block.buttonColor"
-              />
+          <textBlock 
+            :title="block.fields.title"
+            :text="block.fields.text"
+            :buttonText="block.fields.buttonText"
+            :buttonColor="block.fields.buttonColor"
+          />
         </div>
       </div>
     </div>
@@ -36,7 +34,6 @@ export default {
   props: {
     textBlocks: {
       type: Array,
-      required: true
     },
     bgDark: {
       type: Boolean,
@@ -56,14 +53,6 @@ export default {
     padding-bottom: rem(50px);
   }
 
-  .title {
-    height: auto;
-
-    @include media-breakpoint-up(md) {
-      height: 47px
-    }
-  }
-
   .grid {
     justify-content: space-between;
     display: grid;
@@ -79,17 +68,6 @@ export default {
     @include media-breakpoint-up(lg) {
       grid-template-columns: auto auto auto;
       gap: 40px;
-    }
-  }
-
-  &__button {
-    margin-top: 20px;
-  }
-
-  &__textBlock {
-    .text {
-      width: 100%;
-      max-width: 600px;
     }
   }
 }

@@ -41,8 +41,7 @@ export default {
     },
     icon: {
       type: String,
-      required: true
-    }
+    },
   }
 }
 </script>

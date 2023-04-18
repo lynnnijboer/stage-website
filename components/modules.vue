@@ -4,40 +4,30 @@
       v-for="(module, index) in modules" 
       :key="index">
       <modulesCaseBlockModule 
-        v-if="module.type === 'cases'" 
-        :caseBlocks="module.caseBlocks" 
-        :title="module.title" :img="module.img" 
-        :icon="module.icon"    
-      />
-      <modulesHeroModule 
-        v-if="module.type === 'hero'" 
-        :title="module.title" :text="module.text" 
-        :buttonColor="module.buttonColor" 
-        :secondButtonColor="module.secondButtonColor" 
-        :buttonText="module.buttonText" 
-        :secondButtonText="module.secondButtonText"
+        v-if="module.sys.contentType.sys.id === 'casesModule'" 
+        :caseBlocks="module.fields.caseBlocks" 
+        :title="module.fields.title" 
       />
       <modulesTextSlider 
-        v-if="module.type === 'textSlider'" 
-        :word="module.word" 
-        :textSlider="module.textSlider"
+        v-if="module.sys.contentType.sys.id === 'textSlider'" 
+        :words="module.fields.words" 
       />
       <modulesTextBlockModule 
-        v-if="module.type === 'textBlock'" 
-        :textBlocks="module.textBlocks" 
-        :bgDark="module.backgroundDark"
+        v-if="module.sys.contentType.sys.id === 'textBlockModule'" 
+        :textBlocks="module.fields.textBlocks" 
+        :bgDark="module.fields.backgroundDark"
       />
       <modulesImageTextBlock 
-        v-if="module.type === 'imageTextBlock'" 
-        :title="module.title" 
-        :text="module.text" 
-        :img="module.img" 
-        :buttonColor="module.buttonColor" 
-        :buttonText="module.buttonText" 
+        v-if="module.sys.contentType.sys.id === 'imageTextBlock'" 
+        :title="module.fields.title" 
+        :text="module.fields.text" 
+        :img="module.fields.img.fields.file.url" 
+        :buttonColor="module.fields.buttonColor" 
+        :buttonText="module.fields.buttonText" 
       />
       <modulesSkillBlockModule 
-        v-if="module.type === 'skillBlock'" 
-        :skillBlocks="module.skillBlocks"
+        v-if="module.sys.contentType.sys.id === 'skillBlocks'" 
+        :skillBlocks="module.fields.skillBlocks"
       />
     </div>
   </section>

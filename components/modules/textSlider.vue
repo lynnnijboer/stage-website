@@ -3,11 +3,11 @@
   <div class="marquee">
     <div class="marquee__group">
       <h5 
-        v-for="(word, index) in textSlider" 
+        v-for="(word, index) in words" 
         :key="index" 
         class="marquee__group--word" 
       >
-      {{ word.word }}
+      {{ word }}
       </h5>
     </div>
   </div>
@@ -18,10 +18,7 @@
 export default {
   name: 'textSlider',
   props: {
-    word: {
-      type: String,
-    },
-    textSlider: {
+    words: {
       type: Array,
     }
   }

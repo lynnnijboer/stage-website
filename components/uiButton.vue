@@ -2,7 +2,12 @@
 <template>
   <button 
       class="ui-button" 
-      :class="color && variant === 'filled' ? `bg-color-${color} py-1 px-3` : 'btn-transparant'"
+      :class="
+        color !== 'transparant' && variant === 'filled'
+          ? `bg-color-${color} py-1 px-3`
+          : color === 'transparant'
+            ? 'btn-transparant'
+            : ''"
     >
     {{ buttonText }}
   </button>

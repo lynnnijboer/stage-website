@@ -7,8 +7,8 @@
           <skillBlock 
             v-for="(skillBlock, index) in skillBlocks" 
             :key="index" 
-            :text="skillBlock.text" 
-            :title="skillBlock.title"/>
+            :text="skillBlock.fields.text" 
+            :title="skillBlock.fields.title"/>
         </div>
       </div>
     </div>
