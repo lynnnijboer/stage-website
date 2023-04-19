@@ -75,7 +75,6 @@ export default {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      align-items: center;
 
       @include media-breakpoint-up(sm) {
         flex-direction: row;

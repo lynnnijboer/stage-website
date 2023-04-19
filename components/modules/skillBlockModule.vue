@@ -3,7 +3,7 @@
   
     <div class="skillBlockModule">
       <div class="container">
-        <div class="skillBlockModule__skillBlocks">
+        <div :class="skillBlocks.length === 1 ? '' : 'skillBlocks__grid'" class="skillBlockModule__skillBlocks">
           <skillBlock 
             v-for="(skillBlock, index) in skillBlocks" 
             :key="index" 
@@ -40,7 +40,7 @@ export default {
     transform: translateY(-30%);
   }
 
-  &__skillBlocks {
+  .skillBlocks__grid {
     display: grid;
     grid-template-columns: 1fr;
     gap: 40px;

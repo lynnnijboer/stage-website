@@ -2,14 +2,16 @@
     <div>
         <navMenu :buttonText="buttonText" :color="color" :listItems="listItems"/>
         <nuxt />
+        <footerModule />
     </div>
 </template>
 
 <script>
 import navMenu from "~/components/navMenu.vue";
+import footerModule from "~/components/footerModule.vue";
 
 export default {
-    components: { navMenu },
+    components: { navMenu, footerModule },
     name: 'default',
     data() {
         return {
@@ -18,17 +20,31 @@ export default {
             listItems: [
                 {
                     itemText: 'home',
-                    link: 'hallo',
+                    link: '/',
                 },
                 {
                     itemText: 'my work',
-                    link: 'hallo',
+                    link: '/my-work',
                 },
                 {
                     itemText: 'contact',
-                    link: 'hallo',
+                    link: '/contact',
                 },
-            ]
+            ],
+            footerBlocks: [
+                {
+                    title: 'hallo',
+                    text: 'hallo',
+                },
+                {
+                    title: 'hallo',
+                    text: 'hallo',
+                },
+                {
+                    title: 'hallo',
+                    text: 'hallo',
+                }
+            ],
         }
     }
 }
