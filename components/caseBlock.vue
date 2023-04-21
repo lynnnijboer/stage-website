@@ -1,6 +1,7 @@
 
 <template>
-  <div 
+  <nuxtLink
+    :to="link"
     class="caseBlock w-100" 
     :style="{ '--bg-img': `url('${img}')` }"
   >
@@ -15,7 +16,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </nuxtLink>
 </template>
 
 <script>
@@ -40,6 +41,9 @@ export default {
       default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
     },
     icon: {
+      type: String,
+    },
+    link: {
       type: String,
     },
   }

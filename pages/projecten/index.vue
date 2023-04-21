@@ -1,37 +1,37 @@
+
 <template>
-  <section v-if="currentPage">
-    <h2>{{ currentPage.fields.title }}</h2>
-    <p>{{ currentPage.fields.intro }}</p>
-    <article v-if="projects" class="projects">
-      <nuxtLink 
-        :style="{ '--bg-img': `url('${img}')` }"
-        v-for="(project, index) in projects" 
-        :key="index" 
-        :to="`/projecten/${project.fields.slug}`"
-        class="projectBlock col-4"
-        >
-      </nuxtLink>
+  <section v-if="currentPage && currentPage.fields"  class="container">
+    <article class="caseBlockModule" :class="currentPage.fields.title ? 'transform-small' : ''">
+      <h3 
+        v-if="currentPage.fields.title" 
+        class="caseBlockModule__title h4 text-color-dark"
+      >
+        {{ currentPage.fields.title }}
+      </h3>
+       <p>{{ currentPage.fields.intro }}</p>
     </article>
+    <div v-if="projects" class="caseBlocks">
+        <caseBlock 
+          v-for="(project, index) in projects" 
+          :key="index" 
+          :img="project.fields.img.fields.file.url" 
+          :title="project.fields.title"
+          :text="project.fields.intro"
+          :link="`/projecten/${project.fields.slug}`"
+        />
+    </div>
   </section>
 </template>
 
 <script>
-
 
 export default {
   name: "projecten",
   data() {
     return {
       currentPage: {},
-      projects: {}
+      projects: null
     };
-  },
-  props: {
-    img: {
-      type: String,
-      default: "https://images.pexels.com/photos/3182829/pexels-photo-3182829.jpeg?auto=compress&cs=tinysrgb&w=800",
-      required: true
-    },
   },
   async fetch() {
     const { items } = await this.$contentful.getEntries({
@@ -41,7 +41,6 @@ export default {
     [this.currentPage] = items;
     const projectItems = await this.$contentful.getEntries({
       content_type: "project",
-      include: 1,
     });
     this.projects = projectItems.items;
   },
@@ -49,23 +48,34 @@ export default {
 
 </script>
 
-<style lang="scss">
-.projectBlock {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
-  border-radius: 2rem;
-  cursor: pointer;
-  background-image: var(--bg-img);
-  background-size: cover;
-  height: rem(450px);
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: flex-end;
-  transition: all 0.5s ease-in-out;
-  overflow: hidden;
 
-  &:hover {
-    transform: translateY(-10px);
+<style lang="scss" scoped>
+.caseBlockModule {
+
+  padding: {
+    top: rem(50px);
+    bottom: rem(150px);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: var(text-color-beta);
+  }
+
+  .caseBlocks {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
 }
 </style>
+
 

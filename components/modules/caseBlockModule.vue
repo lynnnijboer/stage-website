@@ -16,6 +16,7 @@
           :img="caseBlock.fields.img.fields.file.url" 
           :title="caseBlock.fields.title"
           :text="caseBlock.fields.text"
+          :link="caseBlock.fields.link"
         />
       </div>
     </div>
