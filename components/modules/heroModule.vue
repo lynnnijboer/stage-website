@@ -71,6 +71,11 @@ export default {
       margin-bottom: 40px;
     }
 
+    &--title {
+      width: 100%;
+      max-width: 550px;
+    }
+
     &--buttons {
       display: flex;
       flex-direction: column;

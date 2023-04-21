@@ -1,7 +1,8 @@
 
 <template>
   <footer class="footerModule">
-      <textBlock v-for="(block, index) in footerBlocks " 
+      <textBlock v-for="(block, index) in footerBlocks"
+        :key="index" 
         :title="block.title"
         :text="block.text"
       />

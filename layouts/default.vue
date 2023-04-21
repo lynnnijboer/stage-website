@@ -15,20 +15,16 @@ export default {
     name: 'default',
     data() {
         return {
-            buttonText: 'button text',
+            buttonText: 'Contact',
             color: 'alpha',
             listItems: [
                 {
-                    itemText: 'home',
+                    itemText: 'Home',
                     link: '/',
                 },
                 {
-                    itemText: 'my work',
-                    link: '/my-work',
-                },
-                {
-                    itemText: 'contact',
-                    link: '/contact',
+                    itemText: 'Projecten',
+                    link: '/projecten',
                 },
             ],
             footerBlocks: [

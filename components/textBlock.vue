@@ -38,10 +38,6 @@ export default {
 
   &__title {
     height: auto;
-
-    @include media-breakpoint-up(md) {
-      height: 47px
-    }
   }
 
   &__button {

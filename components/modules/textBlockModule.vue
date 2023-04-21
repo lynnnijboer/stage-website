@@ -7,7 +7,10 @@
     <div class="container">
       <div 
         class="textBlockModule__wrapper" 
-        :class="textBlocks.length === 1 ? '' : 'grid'"
+        :class="[
+          textBlocks.length === 2 ? 'grid' : '',
+          textBlocks.length >= 3 ? 'grid-2' : ''
+        ]"
         >
         <div 
           v-for="(block, index) in textBlocks" 
@@ -45,8 +48,8 @@ export default {
 
 <style lang="scss" scoped>
 .textBlockModule {
-  padding-top: rem(50px);
-  padding-bottom: rem(50px);
+  padding-top: rem(100px);
+  padding-bottom: rem(100px);
 
   .padding-bg-dark {
     padding-top: rem(50px);
@@ -64,9 +67,22 @@ export default {
       grid-template-columns: 1fr 1fr;
       gap: 40px;
     }
+  }
+
+  .grid-2 {
+    justify-content: space-between;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
 
     @include media-breakpoint-up(lg) {
-      grid-template-columns: auto auto auto;
+      grid-template-columns: 1fr 1fr 1fr;
       gap: 40px;
     }
   }

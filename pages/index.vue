@@ -1,6 +1,5 @@
 <template>
   <section v-if="currentPage.fields">
-    <!-- <pre>{{ currentPage.fields.buttonColor }}</pre> -->
     <modulesHeroModule 
       :title="currentPage.fields.title" :text="currentPage.fields.intro" 
       :buttonColor="currentPage.fields.buttonColor" 

@@ -60,7 +60,7 @@ export default {
 
   padding: {
     top: rem(100px);
-    bottom: rem(50px);
+    bottom: rem(100px);
   }
 
   @include media-breakpoint-up(md) {
