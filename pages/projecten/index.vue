@@ -1,7 +1,7 @@
 
 <template>
-  <section v-if="currentPage && currentPage.fields"  class="container">
-    <article class="caseBlockModule" :class="currentPage.fields.title ? 'transform-small' : ''">
+  <section v-if="currentPage && currentPage.fields"  class="container caseBlockModule">
+    <article :class="currentPage.fields.title ? 'transform-small' : ''">
       <h3 
         v-if="currentPage.fields.title" 
         class="caseBlockModule__title h4 text-color-dark"

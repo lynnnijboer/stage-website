@@ -52,7 +52,6 @@ export default {
 
 <style lang="scss" scoped>
 .caseBlock {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px;
   border-radius: 2rem;
   cursor: pointer;
   background-image: var(--bg-img);

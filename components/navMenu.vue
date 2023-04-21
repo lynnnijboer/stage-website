@@ -1,4 +1,3 @@
-
 <template>
   <nav class="navigation">
     <ul class="nav-items d-flex list-unstyled justify-content-end px-2">
@@ -44,6 +43,8 @@ export default {
 
 <style lang="scss" scoped>
 .navigation {
+  background-color: var(--color-dark);
+  width: 100%;
   z-index: 999;
   position: fixed;
   right: 0;
