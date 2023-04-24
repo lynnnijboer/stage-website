@@ -1,7 +1,7 @@
 
 <template>
   <section v-if="currentPage && currentPage.fields"  class="container caseBlockModule">
-    <article :class="currentPage.fields.title ? 'transform-small' : ''">
+    <article class="caseBlockModule__text" :class="currentPage.fields.title ? 'transform-small' : ''">
       <h3 
         v-if="currentPage.fields.title" 
         class="caseBlockModule__title h4 text-color-dark"
@@ -53,12 +53,16 @@ export default {
 .caseBlockModule {
 
   padding: {
-    top: rem(50px);
-    bottom: rem(150px);
+    top: rem(100px);
+    bottom: rem(100px);
   }
 
   &__title {
-    margin-bottom: 20px;
+    margin: 0;
+  }
+
+  &__text {
+    margin-bottom: 40px;
     color: var(text-color-beta);
   }
 

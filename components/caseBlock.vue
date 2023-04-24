@@ -1,6 +1,7 @@
 
 <template>
   <nuxtLink
+    v-if="link"
     :to="link"
     class="caseBlock w-100" 
     :style="{ '--bg-img': `url('${img}')` }"

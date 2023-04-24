@@ -8,16 +8,17 @@
       <div 
         class="textBlockModule__wrapper" 
         :class="[
-          textBlocks.length === 2 ? 'grid' : '',
-          textBlocks.length >= 3 ? 'grid-2' : ''
-        ]"
+            textBlocks.length === 1 ? 'grid-1' : '',
+            textBlocks.length === 2 ? 'grid-2' : '',
+            textBlocks.length >= 3 ? 'grid-3' : ''
+          ]"
         >
         <div 
           v-for="(block, index) in textBlocks" 
           :key="index"
           class="textBlockModule__textBlock w-100" 
           :class="[textBlocks.length === 1 ? 'd-flex flex-column align-items-center text-center' : '',
-          bgDark === true ? 'text-color-light padding-bg-dark' : 'text-color-dark']"
+            bgDark === true ? 'text-color-light padding-bg-dark' : 'text-color-dark']"
         >
           <textBlock 
             :title="block.fields.title"
@@ -56,7 +57,13 @@ export default {
     padding-bottom: rem(50px);
   }
 
-  .grid {
+  .grid-1 {
+    .textBlock {
+      max-width: 600px;
+    }
+  }
+
+  .grid-2 {
     justify-content: space-between;
     display: grid;
     grid-template-rows: auto;
@@ -69,7 +76,7 @@ export default {
     }
   }
 
-  .grid-2 {
+  .grid-3 {
     justify-content: space-between;
     display: grid;
     grid-template-rows: auto;

@@ -1,6 +1,6 @@
 <template>
   <nav class="navigation">
-    <ul class="nav-items d-flex list-unstyled justify-content-end px-2">
+    <ul class="nav-items d-flex list-unstyled justify-content-end mb-0 px-2">
       <li 
         v-for="(item, index) in listItems" 
         :key="index" 
@@ -43,7 +43,7 @@ export default {
 
 <style lang="scss" scoped>
 .navigation {
-  background-color: var(--color-dark);
+  background-color: var(--color-alpha);
   width: 100%;
   z-index: 999;
   position: fixed;

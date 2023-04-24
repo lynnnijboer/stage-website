@@ -1,9 +1,13 @@
 <template>
-    <div v-if="currentPage && currentPage.fields" class="container">
-       <nuxtLink to="/projecten" class="h5">Back to projects</nuxtLink>
-       <h2>{{ currentPage.fields.title }}</h2>
-        <div v-if="currentPage.fields.modules" class="modules">
-            <modules :modules="currentPage.fields.modules" />
+    <div class="verslagPagina">
+        <div v-if="currentPage && currentPage.fields">
+            <div class="verslagPagina__text container">
+                <nuxtLink to="/projecten" class="h5 mb-4">Terug naar projecten</nuxtLink>
+                <h2>{{ currentPage.fields.title }}</h2>
+            </div>
+            <div v-if="currentPage.fields.modules" class="modules">
+                <modules :modules="currentPage.fields.modules" />
+            </div>
         </div>
     </div>
 </template>
@@ -33,3 +37,19 @@ export default {
 };
 
 </script>
+
+<style lang="scss">
+.verslagPagina {
+    padding: {
+        top: rem(50px);
+        bottom: rem(50px);
+    }
+
+    &__text {
+        padding: {
+            top: rem(40px);
+            bottom: rem(40px);
+        }
+    }
+}
+</style>

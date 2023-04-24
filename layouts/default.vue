@@ -16,7 +16,7 @@ export default {
     data() {
         return {
             buttonText: 'Contact',
-            color: 'alpha',
+            color: 'beta',
             listItems: [
                 {
                     itemText: 'Home',
