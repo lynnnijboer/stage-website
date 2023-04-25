@@ -1,7 +1,10 @@
 
 <template>
   <section v-if="currentPage && currentPage.fields"  class="container caseBlockModule">
-    <article class="caseBlockModule__text" :class="currentPage.fields.title ? 'transform-small' : ''">
+    <article 
+      class="caseBlockModule__text" 
+      :class="currentPage.fields.title ? 'transform-small' : ''"
+      >
       <h3 
         v-if="currentPage.fields.title" 
         class="caseBlockModule__title h4 text-color-dark"
@@ -10,9 +13,13 @@
       </h3>
        <p>{{ currentPage.fields.intro }}</p>
     </article>
-    <div v-if="projects" class="caseBlocks">
+    <div 
+      v-if="projects" 
+      class="caseBlocks"
+      >
         <caseBlock 
           v-for="(project, index) in projects" 
+          :icon="project.fields.icon"
           :key="index" 
           :img="project.fields.img.fields.file.url" 
           :title="project.fields.title"

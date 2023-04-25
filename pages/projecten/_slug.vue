@@ -5,7 +5,9 @@
                 <nuxtLink to="/projecten" class="h5 mb-4">Terug naar projecten</nuxtLink>
                 <h2>{{ currentPage.fields.title }}</h2>
             </div>
-            <div v-if="currentPage.fields.modules" class="modules">
+            <div 
+                v-if="currentPage.fields.modules" 
+                class="modules">
                 <modules :modules="currentPage.fields.modules" />
             </div>
         </div>

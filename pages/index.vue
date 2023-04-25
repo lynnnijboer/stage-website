@@ -3,9 +3,12 @@
     <modulesHeroModule 
       :title="currentPage.fields.title" :text="currentPage.fields.intro" 
       :buttonColor="currentPage.fields.buttonColor" 
+      :buttonLink="currentPage.fields.buttonLink" 
       :secondButtonColor="currentPage.fields.secondButtonColor" 
       :buttonText="currentPage.fields.button" 
       :secondButtonText="currentPage.fields.secondButton"
+      :secondButtonLink="currentPage.fields.secondButtonLink" 
+
     />
     <div class="modules">
       <modules :modules="currentPage.fields.modules"/>

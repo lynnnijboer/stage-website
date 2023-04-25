@@ -24,6 +24,7 @@
         :img="module.fields.img.fields.file.url" 
         :buttonColor="module.fields.buttonColor" 
         :buttonText="module.fields.buttonText" 
+        :buttonLink="module.fields.buttonLink"
       />
       <modulesSkillBlockModule 
         v-if="module.sys.contentType.sys.id === 'skillBlocks'" 

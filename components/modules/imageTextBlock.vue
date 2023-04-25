@@ -3,7 +3,7 @@
   <div class="container">
     <div class="imageTextBlock">
       <div 
-        v-if="title && text" 
+        v-if="title && text && img" 
         class="imageTextBlock__textBlock col-12 col-md-6"
       >
         <div class="imageTextBlock__textBlock--text text-color-dark">
@@ -13,6 +13,7 @@
             :img="img"
             :buttonText="buttonText"
             :buttonColor="buttonColor"
+            :link="buttonLink"
           />
         </div>
       </div>
@@ -38,14 +39,19 @@ export default {
       type: String
     },
     title: {
-      type: String
+      type: String,
+      required: true
     },
     text: {
       type: String,
+      required: true
     },
     img: {
       type: String,
       required: true
+    },
+    buttonLink: {
+      type: String,
     },
   },
 }

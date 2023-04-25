@@ -7,10 +7,12 @@
           <p class="heroModule__content--text">{{ text }}</p>
           <div class="heroModule__content--buttons">
             <uiButton 
+              :link="buttonLink"
               :color="buttonColor" 
               :buttonText="buttonText"
             />
             <uiButton 
+              :link="secondButtonLink"
               :color="secondButtonColor" 
               :buttonText="secondButtonText"
             />
@@ -45,6 +47,12 @@ export default {
       type: String,
     },
     secondButtonText: {
+      type: String,
+    },
+    buttonLink: {
+      type: String,
+    },
+    secondButtonLink: {
       type: String,
     },
   },

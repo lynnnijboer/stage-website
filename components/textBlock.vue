@@ -1,11 +1,22 @@
 
 <template>
-  <div class="textBlock">
-    <h3 class="textBlock__title h4">{{ title }}</h3>
-      <p  class="textBlock__text">{{ text }}</p>
+  <div 
+    class="textBlock">
+      <h3 
+        v-if="title" 
+        class="textBlock__title h4"
+        >
+        {{ title }}
+      </h3>
+      <p 
+        v-if="text" 
+        class="textBlock__text"
+        >
+        {{ text }}
+      </p>
       <uiButton 
         class="textBlock__button" 
-        v-if="buttonText && buttonColor" 
+        :link="link" 
         :buttonText="buttonText" 
         :color="buttonColor"
       />
@@ -29,6 +40,9 @@ export default {
     buttonColor: {
       type: String
     },
+    link: {
+      type: String
+    },
   }
 }
 </script>
@@ -42,11 +56,6 @@ export default {
 
   &__button {
     margin-top: 20px;
-  }
-
-  &__text {
-    width: 100%;
-    max-width: 600px;
   }
 }
 </style>

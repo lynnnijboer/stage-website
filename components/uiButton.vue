@@ -1,16 +1,20 @@
 
 <template>
-  <button 
-      class="ui-button" 
-      :class="
-        color !== 'transparant' && variant === 'filled'
-          ? `bg-color-${color} py-1 px-3`
-          : color === 'transparant'
-            ? 'btn-transparant'
-            : ''"
+  <a 
+    v-if="buttonText && link" 
+    :href="link"
     >
-    {{ buttonText }}
-  </button>
+    <button 
+        class="ui-button" 
+        :class="color !== 'transparant' && variant === 'filled'
+            ? `bg-color-${color} py-1 px-3`
+            : color === 'transparant'
+              ? 'btn-transparant'
+              : ''"
+      >
+        {{ buttonText }}
+    </button>
+  </a>
 </template>
 
 <script>
@@ -27,6 +31,9 @@ export default {
       default: "filled"
     },
     color: {
+      type: String,
+    },
+    link: {
       type: String,
     }
   }

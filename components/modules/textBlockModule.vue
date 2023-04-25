@@ -6,25 +6,25 @@
     >
     <div class="container">
       <div 
-        class="textBlockModule__wrapper" 
-        :class="[
-            textBlocks.length === 1 ? 'grid-1' : '',
-            textBlocks.length === 2 ? 'grid-2' : '',
-            textBlocks.length >= 3 ? 'grid-3' : ''
-          ]"
-        >
+        class="textBlockModule__wrapper"
+        :class="[textBlocks.length === 1 ? 'text-center text m-auto' : 'd-flex flex-row flex-wrap',
+          bgDark === true ? 'text-color-light padding-bg-dark' : 'text-color-dark']">
         <div 
           v-for="(block, index) in textBlocks" 
           :key="index"
           class="textBlockModule__textBlock w-100" 
-          :class="[textBlocks.length === 1 ? 'd-flex flex-column align-items-center text-center' : '',
-            bgDark === true ? 'text-color-light padding-bg-dark' : 'text-color-dark']"
+          :class="[
+              textBlocks.length === 1 ? 'col-12' : '',
+              textBlocks.length === 2 ? 'col-12 col-md-6' : '',
+              textBlocks.length === 3 ? 'col-12 col-md-4' : ''
+            ]" 
         >
-          <textBlock 
-            :title="block.fields.title"
-            :text="block.fields.text"
-            :buttonText="block.fields.buttonText"
-            :buttonColor="block.fields.buttonColor"
+          <textBlock
+              :title="block.fields.title"
+              :text="block.fields.text"
+              :buttonText="block.fields.buttonText"
+              :buttonColor="block.fields.buttonColor"
+              :buttonLink="block.fields.buttonLink"
           />
         </div>
       </div>
@@ -52,46 +52,16 @@ export default {
   padding-top: rem(100px);
   padding-bottom: rem(100px);
 
+
+  .text {
+    width: 100%;
+    max-width: 700px;
+  }
+
+
   .padding-bg-dark {
     padding-top: rem(50px);
     padding-bottom: rem(50px);
-  }
-
-  .grid-1 {
-    .textBlock {
-      max-width: 600px;
-    }
-  }
-
-  .grid-2 {
-    justify-content: space-between;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    gap: 20px;
-
-    @include media-breakpoint-up(md) {
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-  }
-
-  .grid-3 {
-    justify-content: space-between;
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    gap: 20px;
-
-    @include media-breakpoint-up(md) {
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 40px;
-    }
   }
 }
 </style>

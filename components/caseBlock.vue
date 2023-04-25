@@ -9,9 +9,17 @@
     <div class="caseBlock__content text-color-light">
       <div class="caseBlock__content--text">
         <h5 class="m-0 h6">{{ title }}</h5>
-        <p class="m-0">{{ text }}</p>
+        <p 
+          v-if="text" 
+          class="m-0"
+          >
+          {{ text }}
+        </p>
       </div>
-      <div class="caseBlock__content--button">
+      <div 
+        v-if="icon" 
+        class="caseBlock__content--button"
+        >
         <div class="case-button">
           <icons :icon="icon"/>
         </div>

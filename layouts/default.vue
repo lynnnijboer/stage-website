@@ -1,6 +1,10 @@
 <template>
     <div>
-        <navMenu :buttonText="buttonText" :color="color" :listItems="listItems"/>
+        <navMenu 
+            :buttonText="buttonText" 
+            :color="color" 
+            :buttonLink="buttonLink" 
+            :listItems="listItems"/>
         <nuxt />
         <footerModule />
     </div>
@@ -16,6 +20,7 @@ export default {
     data() {
         return {
             buttonText: 'Contact',
+            buttonLink: '/',
             color: 'beta',
             listItems: [
                 {

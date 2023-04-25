@@ -1,6 +1,8 @@
 <template>
   <nav class="navigation">
-    <ul class="nav-items d-flex list-unstyled justify-content-end mb-0 px-2">
+    <ul 
+      v-if="listItems"
+      class="nav-items d-flex list-unstyled justify-content-end mb-0 px-2">
       <li 
         v-for="(item, index) in listItems" 
         :key="index" 
@@ -13,6 +15,7 @@
       </li>
       <uiButton 
         class="nav-button" 
+        :link="buttonLink"
         :buttonText="buttonText" 
         :color="color"/>
     </ul>
@@ -36,6 +39,9 @@ export default {
     color: {
       type: String,
       default: 'alpha'
+    },
+    buttonLink: {
+      type: String
     }
   }
 }

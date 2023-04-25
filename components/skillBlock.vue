@@ -20,7 +20,8 @@ export default {
     },
     text: {
       type: String,
-      default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+      default: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      required: true
     },
 
   }

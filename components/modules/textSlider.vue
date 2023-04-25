@@ -1,6 +1,8 @@
 
 <template>
-  <div class="marquee">
+  <div
+    v-if="words"
+    class="marquee">
     <div class="marquee__group">
       <h5 
         v-for="(word, index) in words" 
