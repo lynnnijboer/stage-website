@@ -34,6 +34,11 @@ export default {
   cursor: pointer;
   border-radius: 2rem;
   background-color: var(--color-light);
+  transition: all 0.5s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 
   &__content {
     padding: 3rem;

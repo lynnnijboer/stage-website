@@ -1,9 +1,11 @@
 <template>
   <nav class="navigation">
     <div class="hamburger-icon" @click="showMenu()"> 
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
+      <div class="hamburger-icon__bars">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
     </div>
     <ul
       v-if="listItems"
@@ -90,15 +92,16 @@ export default {
   }
 
   .hamburger-icon {
+    display: flex;
+    justify-content: flex-end;
     cursor: pointer;
-    display: inline-block;
 
     .bar1,
     .bar2,
     .bar3 {
       width: 35px;
-      height: 5px;
-      background-color: #333;
+      height: 3px;
+      background-color: var(--color-light);
       margin: 6px 0;
       transition: 0.4s;
     }
@@ -115,15 +118,15 @@ export default {
     justify-content: flex-start;
 
     &__item {
-      padding: {
-        top: 1rem;
-        bottom: 1rem;
-        left: 0;
-        right: 1rem;
-      }
-
+      padding-block:1rem;
+      padding-inline: 0;
+  
       @include media-breakpoint-up(sm) {
         padding: 1rem;
+
+        &a:hover {
+          text-decoration: underline;
+        }
       }
     }
 
@@ -142,7 +145,9 @@ export default {
     .closed-menu {
       opacity: 1;
       height: auto;
+      width: 100%;
     }
+
   }
 
 }

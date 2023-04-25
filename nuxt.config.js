@@ -4,8 +4,8 @@ const config = require('./config/config');
 
 export default {
 
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  // // Target: https://go.nuxtjs.dev/config-target
+  // target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -31,6 +31,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/contentful",
+    "~/plugins/vue-in-viewport",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

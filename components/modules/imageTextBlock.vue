@@ -1,7 +1,9 @@
 
 <template>
   <div class="container">
-    <div class="imageTextBlock">
+    <div 
+      v-in-viewport.once
+      class="imageTextBlock viewport-animation">
       <div 
         v-if="title && text && img" 
         class="imageTextBlock__textBlock col-12 col-md-6"

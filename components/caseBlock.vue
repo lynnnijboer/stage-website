@@ -74,6 +74,7 @@ export default {
 
   &:hover {
     transform: translateY(-10px);
+    text-decoration: none;
 
     .caseBlock__content--button {
       opacity: 1;

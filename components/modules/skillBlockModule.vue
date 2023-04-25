@@ -3,8 +3,9 @@
     <div class="skillBlockModule">
       <div class="container">
         <div 
+          v-in-viewport.once
           :class="skillBlocks.length === 1 ? '' : 'skillBlocks__grid'" 
-          class="skillBlockModule__skillBlocks">
+          class="skillBlockModule__skillBlocks viewport-animation">
           <skillBlock 
             v-for="(skillBlock, index) in skillBlocks" 
             :key="index" 

@@ -12,7 +12,8 @@
         <div 
           v-for="(block, index) in textBlocks" 
           :key="index"
-          class="textBlockModule__textBlock w-100" 
+          v-in-viewport.once
+          class="textBlockModule__textBlock w-100 viewport-animation" 
           :class="[
               textBlocks.length === 1 ? 'col-12' : '',
               textBlocks.length === 2 ? 'col-12 col-md-6' : '',
