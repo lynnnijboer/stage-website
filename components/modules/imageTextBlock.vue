@@ -2,11 +2,12 @@
 <template>
   <div class="container">
     <div 
-      v-in-viewport.once
-      class="imageTextBlock viewport-animation">
+      
+      class="imageTextBlock">
       <div 
         v-if="title && text && img" 
-        class="imageTextBlock__textBlock col-12 col-md-6"
+        v-in-viewport.once
+        class="imageTextBlock__textBlock col-12 col-md-6 viewport-animation"
       >
         <div class="imageTextBlock__textBlock--text text-color-dark">
           <textBlock
@@ -20,7 +21,8 @@
         </div>
       </div>
       <div 
-        class="imageTextBlock__imageBlock p-0"
+        v-in-viewport.once
+        class="imageTextBlock__imageBlock p-0  viewport-animation"
         :class="title && text ? 'col-md-6' : ''" 
         :style="{ '--bg-img': `url('${img}')` }"
       >

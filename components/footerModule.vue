@@ -1,17 +1,21 @@
 
 <template>
-  <footer class="footerModule">
-      <textBlock 
+    <footer class="footerModule">
+      <div class="footerModule__wrapper">
+      <textBlock
         v-for="(block, index) in footerBlocks"
         :key="index" 
         :title="block.title"
         :text="block.text"
+        :buttonText="block.buttonText"
+        :link="block.buttonLink"
+        :buttonColor="v=block.buttonColor"
       />
-  </footer> 
+      </div>
+   </footer> 
 </template>
 
 <script>
-import textBlock from './textBlock.vue';
 
 
 export default {
@@ -21,22 +25,30 @@ export default {
       type: Array
     },
   },
-  components: { textBlock }
 }
 </script>
 
 <style lang="scss" scoped>
 .footerModule {
-  display: grid;
-  flex-wrap: wrap;
-  grid-template-columns: 1fr;
+  padding-inline: 1rem;
+  padding-block: rem(50px);
+  background-color: var(--color-alpha);
+  color: var(--color-light);
 
-  @include media-breakpoint-up(md) {
+  &__wrapper{
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 1fr;
+
+   @include media-breakpoint-up(md) {
     grid-template-columns: 1fr 1fr;
   }
 
   @include media-breakpoint-up(lg) {
     grid-template-columns: 1fr 1fr 1fr;
   }
+  }
+
+ 
 }
 </style>
