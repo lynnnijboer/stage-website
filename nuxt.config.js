@@ -3,11 +3,9 @@ import contentful from './plugins/contentful';
 const config = require('./config/config');
 
 export default {
-  // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
 
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  // // Target: https://go.nuxtjs.dev/config-target
+  // target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -33,6 +31,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     "~/plugins/contentful",
+    "~/plugins/vue-in-viewport",
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -53,6 +52,14 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
   },
+
+  publicRuntimeConfig: {
+    CTF_SPACE_ID: process.env.CTF_SPACE_ID,
+    CTF_HOST: process.env.CTF_HOST,
+    CTF_CDA_ACCESS_TOKEN: process.env.CTF_CDA_ACCESS_TOKEN,
+    CTF_CPA_ACCESS_TOKEN: process.env.CTF_CPA_ACCESS_TOKEN,
+  },
+
   styleResources: {
     scss: [
       './assets/scss/functions/*.scss',

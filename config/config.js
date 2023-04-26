@@ -1,3 +1,8 @@
 module.exports = {
-    css: ['~assets/scss/main']
+    css: ['~assets/scss/main'],
+    pages: {
+        project: {
+            nl: '/projects',
+        },
+    },
 }
