@@ -40,14 +40,18 @@ export default {
       projects: null
     };
   },
+ 
   async fetch() {
+    //project overview
     const { items } = await this.$contentful.getEntries({
       content_type: "projecten",
       include: 1,
     });
     [this.currentPage] = items;
+    //project zelf
     const projectItems = await this.$contentful.getEntries({
       content_type: "project",
+      order: 'fields.title',
     });
     this.projects = projectItems.items;
   },

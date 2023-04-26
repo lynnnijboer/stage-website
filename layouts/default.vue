@@ -4,9 +4,12 @@
             :buttonText="buttonText" 
             :color="color" 
             :buttonLink="buttonLink" 
-            :listItems="listItems"/>
+            :listItems="listItems"
+        />
         <nuxt />
-        <footerModule />
+        <footerModule 
+            :footerBlocks="footerBlocks"
+        />
     </div>
 </template>
 
@@ -34,12 +37,17 @@ export default {
             ],
             footerBlocks: [
                 {
-                    title: 'hallo',
-                    text: 'hallo',
+                    title: 'Projecten',
+                    text: 'Voor school heb als opdracht gekregen om een website te maken waarin ik met stage verslag laat zien.',
+                    buttonText: 'Bekijk projecten',
+                    buttonColor: 'beta',
+                    buttonLink: '/projecten'
                 },
                 {
-                    title: 'hallo',
-                    text: 'hallo',
+                    title: 'Socials',
+                    buttonText: 'Instagram',
+                    buttonColor: 'transparant',
+                    buttonLink: '/projecten'
                 },
                 {
                     title: 'hallo',
