@@ -1,54 +1,49 @@
-
 <template>
-    <footer class="footerModule">
-      <div class="footerModule__wrapper">
+  <footer class="footerModule">
+    <div class="footerModule__wrapper">
       <textBlock
         v-for="(block, index) in footerBlocks"
-        :key="index" 
+        :key="index"
         :title="block.title"
         :text="block.text"
         :buttonText="block.buttonText"
         :link="block.buttonLink"
-        :buttonColor="v=block.buttonColor"
+        :buttonColor="block.buttonColor"
       />
-      </div>
-   </footer> 
+    </div>
+  </footer>
 </template>
 
 <script>
-
-
 export default {
   name: "footerModule",
   props: {
     footerBlocks: {
-      type: Array
+      type: Array,
     },
   },
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .footerModule {
-  padding-inline: 1rem;
+  padding-inline: rem(50px);
   padding-block: rem(50px);
   background-color: var(--color-alpha);
   color: var(--color-light);
 
-  &__wrapper{
+  &__wrapper {
     display: grid;
-    gap: 40px;
+    gap: 80px;
     grid-template-columns: 1fr;
 
-   @include media-breakpoint-up(md) {
-    grid-template-columns: 1fr 1fr;
-  }
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 1fr 1fr;
+    }
 
-  @include media-breakpoint-up(lg) {
-    grid-template-columns: 1fr 1fr 1fr;
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
   }
-  }
-
- 
 }
 </style>

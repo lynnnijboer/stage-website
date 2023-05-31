@@ -1,55 +1,51 @@
-
 <template>
-  <div 
-    class="textBlock">
-      <h3 
-        v-if="title" 
-        class="textBlock__title h4"
-        >
-        {{ title }}
-      </h3>
-      <p 
-        v-if="text" 
-        class="textBlock__text"
-        >
-        {{ text }}
-      </p>
-      <uiButton 
-        class="textBlock__button" 
-        :link="link" 
-        :buttonText="buttonText" 
-        :color="buttonColor"
-      />
+  <div class="textBlock">
+    <h3 v-if="title" class="textBlock__title h4">
+      {{ title }}
+    </h3>
+    <p v-if="text" class="textBlock__text">
+      {{ text }}
+    </p>
+    <p v-if="secondText" class="textBlock__text">
+      {{ secondText }}
+    </p>
+    <uiButton
+      class="textBlock__button"
+      :link="link"
+      :buttonText="buttonText"
+      :color="buttonColor"
+    />
   </div>
 </template>
 
 <script>
-
 export default {
-  name: 'textBlock',
+  name: "textBlock",
   props: {
     title: {
-      type: String
+      type: String,
     },
     text: {
-      type: String
+      type: String,
+    },
+    secondText: {
+      type: String,
     },
     buttonText: {
-      type: String
+      type: String,
     },
     buttonColor: {
-      type: String
+      type: String,
     },
     link: {
-      type: String
+      type: String,
     },
-  }
-}
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .textBlock {
-
   &__title {
     height: auto;
   }
